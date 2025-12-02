@@ -8,28 +8,29 @@ document.addEventListener('DOMContentLoaded', function() {
     menuToggle.addEventListener('click', function() {
         navLinks.classList.toggle('active');
 
-        // Cambia el ícono
+        // Cambiar icono hamburguesa ↔ X
         const icon = menuToggle.querySelector('i');
         if (navLinks.classList.contains('active')) {
             icon.classList.remove('fa-bars');
-            icon.classList.add('fa-times'); // Icono de 'X' para cerrar
+            icon.classList.add('fa-times');
         } else {
             icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars'); // Icono de hamburguesa
+            icon.classList.add('fa-bars');
         }
     });
 
-    // Cierra el menú cuando se hace clic en un enlace (en móvil)
+    // Cierra el menú al hacer clic en un enlace (solo en móvil)
     const links = document.querySelectorAll('.nav-links a');
     links.forEach(link => {
         link.addEventListener('click', () => {
             if (window.innerWidth <= 768) {
                 navLinks.classList.remove('active');
-                menuToggle.querySelector('i').classList.remove('fa-times');
-                menuToggle.querySelector('i').classList.add('fa-bars');
+                const icon = menuToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
             }
         });
     });
-    
-    // NOTA: La lógica del contador animado fue removida en este archivo.
+
+    // Nota: lógica para contador animado fue removida
 });
