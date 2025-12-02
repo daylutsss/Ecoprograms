@@ -17,7 +17,7 @@ SECRET_KEY = 'django-insecure-n1@f0zvvnrz@a-0r-6_=4%ayz+zh6=25-le+fri52!h&ofs0f9
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -34,6 +34,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -107,6 +108,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 
 # Si tus archivos estáticos están dentro de /webapp/static/, no necesitas agregar nada aquí,
 # pero mantenemos la variable porque Django la requiere.
