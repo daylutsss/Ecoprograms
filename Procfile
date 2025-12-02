@@ -1,1 +1,1 @@
-web: gunicorn sap.wsgi 
+web: gunicorn sap.sap.wsgi:application
