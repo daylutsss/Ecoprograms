@@ -43,7 +43,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'sap.urls'
+ROOT_URLCONF = 'sap.sap.urls'
 
 
 # Templates configuration
