@@ -29,7 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'webapp',   # Tu aplicación
+    'webapp', # Tu aplicación
 ]
 
 MIDDLEWARE = [
@@ -50,7 +50,7 @@ ROOT_URLCONF = 'sap.sap.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],  # Lo dejamos vacío para que Django use templates dentro de cada app
+        'DIRS': [], # Lo dejamos vacío para que Django use templates dentro de cada app
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -106,18 +106,20 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
+# ----------------------------------------
 
+# La URL que se utiliza al referenciar archivos estáticos en las plantillas (ej: <link href="/static/...")
 STATIC_URL = '/static/'
 
+# El directorio donde Django colocará todos los archivos estáticos (de apps y admin)
+# cuando ejecutes el comando 'python manage.py collectstatic'. Esto es para PRODUCCIÓN.
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-
-# Si tus archivos estáticos están dentro de /webapp/static/, no necesitas agregar nada aquí,
-# pero mantenemos la variable porque Django la requiere.
+# Rutas a directorios *adicionales* que contienen archivos estáticos.
+# Normalmente vacío cuando usas la estructura 'app_name/static/...'
 STATICFILES_DIRS = []
 
 
 # Default primary key field type
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
