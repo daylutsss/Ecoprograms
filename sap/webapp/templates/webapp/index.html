@@ -1,0 +1,169 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌿 Ecoprograms | CBTis 75</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS desde Django -->
+    <link rel="stylesheet" href="{% static 'webapp/css/style.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="#inicio" class="logo">🌱 <strong>Ecoprograms</strong></a>
+            <button class="menu-toggle" aria-label="Abrir menú de navegación">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#proyecto">Nuestro Proyecto</a></li>
+                <li><a href="#impacto">Tu Tarea</a></li>
+                <li><a href="#galeria">Proceso</a></li>
+                <li><a href="#equipo">Equipo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Ecoprograms: <strong>Programando un Futuro Verde</strong></h1>
+            <p>Alumnos del CBTis 75, especialidad Programación, reforestan y limpian tus áreas verdes. <strong>Ahora, ¡te toca cuidarlas!</strong></p>
+            <a href="#impacto" class="btn-principal">¿Cómo puedo ayudar?</a>
+        </div>
+    </section>
+
+    <section id="proyecto" class="seccion-clara">
+        <h2>🛠️ Nuestro Proyecto de Limpieza y Reforestación</h2>
+        <p class="subtitulo">Este proyecto forma parte del Programa Aula, Escuela y Comunidad (PAEC), enfocado en la Telesecundaria No. 489.</p>
+
+        <div class="proyecto-grid" style="text-align: left; max-width: 1000px; margin: 0 auto;">
+            <div class="info-bloque" style="flex: 1 1 100%;">
+                <h3>Objetivo y Metas</h3>
+                <p>Nuestra meta es contribuir al mejoramiento del entorno escolar, fomentando la <strong>conciencia ambiental</strong> entre los alumnos de secundaria, y realizando:</p>
+                <ul>
+                    <li>✅ Limpieza y recolección de basura en áreas verdes.</li>
+                    <li>✅ Reforestación con pasto, árboles y flores en zonas secas.</li>
+                    <li>✅ Mantenimiento de estas áreas durante el semestre.</li>
+                </ul>
+            </div>
+
+            <div class="info-bloque">
+                <h3>🗓️ Cronograma</h3>
+                <p>El proyecto inicia entre los días <strong>23 y 24 de octubre de 2025</strong>, y culmina a mediados de diciembre.</p>
+            </div>
+
+            <div class="info-bloque">
+                <h3>💡 ¿Por qué lo hacemos?</h3>
+                <p>Como alumnos de Programación, aplicamos metodologías ágiles para desarrollar un proyecto ecológico que impacte positivamente a nuestra comunidad.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="impacto" class="seccion-oscura">
+        <h2>❌ ¡Stop! La Basura NO va Ahí</h2>
+        <p class="subtitulo">Tu participación es fundamental para mantener este proyecto durante todo el año. Sigue estos pasos:</p>
+
+        <div class="impacto-cards">
+            <div class="card">
+                <h3>1. Cesto a la Vista 👀</h3>
+                <p>Identifica y usa los botes de basura. Un pequeño acto con un gran impacto.</p>
+            </div>
+
+            <div class="card">
+                <h3>2. Lleva el Ejemplo 🤝</h3>
+                <p>Si ves basura, recógela. Si ves a alguien tirándola, recuérdale usar el cesto.</p>
+            </div>
+
+            <div class="card">
+                <h3>3. Cuida lo Plantado 🌷</h3>
+                <p>No pises ni dañes el pasto o las flores. Cada planta cuenta.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="seccion-clara">
+        <h2>📸 Nuestro Proceso en Acción</h2>
+        <p class="subtitulo">Este es el esfuerzo del equipo Ecoprograms.</p>
+
+        <div class="galeria-grid" style="max-width: 1200px; margin: 0 auto;">
+
+            <div class="foto-item">
+                <img src="{% static 'webapp/img/proceso_limpieza_1.jpg' %}" alt="Alumnos recogiendo basura">
+                <p>Limpieza del área verde.</p>
+            </div>
+
+            <div class="foto-item">
+                <img src="{% static 'webapp/img/proceso_exposicion_1.jpg' %}" alt="Exposición del proyecto">
+                <p>Explicación del proyecto.</p>
+            </div>
+
+            <div class="foto-item">
+                <img src="{% static 'webapp/img/proceso_riego_1.jpg' %}" alt="Riego de plantas">
+                <p>Mantenimiento mediante riego.</p>
+            </div>
+
+            <div class="foto-item">
+                <img src="{% static 'webapp/img/proceso_plantacion_1.jpg' %}" alt="Plantación de árboles">
+                <p>Reforestación con nuevas plantas.</p>
+            </div>
+
+            <div class="foto-item">
+                <img src="{% static 'webapp/img/proceso_herramientas_1.jpg' %}" alt="Herramientas de trabajo">
+                <p>Herramientas preparadas.</p>
+            </div>
+
+            <div class="foto-item">
+                <img src="{% static 'webapp/img/proceso_colaboracion_1.jpg' %}" alt="Colaboración del equipo">
+                <p>Organización del equipo.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="equipo">
+        <div class="footer-content">
+
+            <div class="equipo-info">
+                <h3>🧑‍💻 El Equipo de Ecoprograms</h3>
+                <p>CBTis No. 75 | Tercer Semestre de Programación, Turno Vespertino.</p>
+
+                <ul>
+                    <li>Sánchez Ramírez Dayra Lizeth</li>
+                    <li>Barbosa Bárcenas Miguel Ángel</li>
+                    <li>César Ernesto Alejandrí Maldonado</li>
+                    <li>Murillo Cuéllar Juan Diego</li>
+                    <li>Regalado López Ángel Abraham</li>
+                    <li>Ramos Espínola Evelin Janette</li>
+                    <li>Álvarez Quintero Guillermo Arturo</li>
+                </ul>
+            </div>
+
+            <div class="contacto-info">
+                <h3>📍 Datos del Proyecto</h3>
+                <p><strong>Institución:</strong> Telesecundaria No. 489</p>
+                <p><strong>Ubicación:</strong> San José de la Palma, Dolores Hidalgo, Gto.</p>
+                <p><strong>Inicio:</strong> 23/24 de octubre de 2025</p>
+
+                <a href="mailto:ecoprograms@cbtis75.edu.mx" class="btn-principal" style="margin-top: 15px;">Contáctanos</a>
+            </div>
+
+        </div>
+
+        <div class="derechos">
+            <p>&copy; 2025 Proyecto PAEC - Ecoprograms | CBTis No. 75.</p>
+        </div>
+    </footer>
+
+    <!-- JS desde Django -->
+    <script src="{% static 'webapp/js/script.js' %}"></script>
+
+</body>
+</html>
