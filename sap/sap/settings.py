@@ -79,7 +79,11 @@ USE_TZ = True
 
 # STATIC
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'   # ← Aquí Render servirá los archivos
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 # Si tus imágenes están dentro de webapp/static/webapp/img/
 STATICFILES_DIRS = [
